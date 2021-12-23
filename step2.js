@@ -16,14 +16,45 @@ const addToZero =(arr)=>{
   // console.log(addToZero([1, 2, 3]));
   // console.log(addToZero([1, 2, 3, -2]));
   //runtime: O(n^2)
-  //space complexity: O(1)
+  //space complexity: O(n^2)
 
 //Question 2
-// const hasUniqueCharacters
+const hasUniqueChars = (str)=> {
+    str = str.split("")
+    let newArr = []
+    for(let i = 0; i< str.length; i++){
+    if(newArr.indexOf(str[i]) == -1){
+      newArr.push(str[i])
+    }
+    else return false
+    }
+    
+    return true
+    
+  }
+//   console.log(hasUniqueChars("Moonday"))
+//   console.log(hasUniqueChars("Monday"))
 
 
+//Question 3
 
-
+const isPangram=(answer)=>{
+    let alphabet = ['a', 'b', 'c', 'd', 'e',
+           'f', 'g', 'h', 'i', 'j',
+           'l', 'm', 'n', 'o', 'p',
+           'q', 'r', 's', 't', 'u',
+           'v', 'w', 'x', 'y', 'z'
+         ];
+         answer=answer.toLowerCase();
+         for (let i = 0; i < alphabet.length; i++) {
+             if (answer.indexOf(alphabet[i])<0) {
+               return false;
+             }
+         }
+         return true
+   }
+   console.log(isPangram("The quick brown fox jumps over the lazy dog!"))
+   console.log(isPangram("I like cats, but not mice"))
 
   //Question 4
   function findLongestWord(arr) {

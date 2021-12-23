@@ -63,9 +63,9 @@ let resultsInsert = perf.stop();
 //Same as the first?
 //Just change extraLarge to Large based on line 40? Same on line 49-57?
 
-perf.start();                     
+perf.start();//start timer                    
 doublerAppend(largeArray);
-let resultsLarge1 = perf.stop();
+let resultsLarge1 = perf.stop();//stop timer + save results
 
 perf.start();
 doublerInsert(largeArray);
@@ -77,9 +77,9 @@ let resultsInsertLarge = perf.stop();
 
 
 //Same but with medium array described on line 39?
-perf.start();
+perf.start();//start timer
 doublerAppend(mediumArray);
-let resultsMedium = perf.stop();
+let resultsMedium = perf.stop();////stop timer + save results
 
 perf.start();
 doublerInsert(mediumArray);
@@ -90,26 +90,26 @@ let resultsInsertMedium = perf.stop();
 // console.log('INSERT for MEDIUM Array are:', resultsInsertMedium)
 
 //same on line 38? for small?
-perf.start();
+perf.start();//start timer
 doublerAppend(smallArray);
-let resultsSmall = perf.stop();
+let resultsSmall = perf.stop();//stop timer
 
-perf.start();
+perf.start();//start timer
 doublerInsert(smallArray);
-let resultsInsertSmall = perf.stop();
+let resultsInsertSmall = perf.stop();////stop timer + save results
 
 // console.log('Results for SMALL ARRAY ARE:')
 // console.log('APPENED for SMALL Array is: ', resultsSmall)
 // console.log('INSERT for SMALL Array are:', resultsInsertSmall)
 
 //Same with tiny?
-perf.start();
+perf.start();//start timer
 doublerAppend(tinyArray);
-let resultsTiny = perf.stop()
+let resultsTiny = perf.stop()////stop timer + save results
 
-perf.start();
+perf.start();//start timer
 doublerInsert(tinyArray);
-let resultsInsertTiny = perf.stop();
+let resultsInsertTiny = perf.stop();////stop timer + save results
 
 console.log('Results for TINY ARRAY ARE:')
 console.log('APPENED for TINY Array is: ', resultsTiny)
